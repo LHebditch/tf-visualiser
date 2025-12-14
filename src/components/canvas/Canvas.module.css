@@ -1,0 +1,10 @@
+svg.canvas {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #c7c8c3;
+}
+
+svg.canvas text {
+    pointer-events: none;
+}

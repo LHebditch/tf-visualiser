@@ -1,0 +1,20 @@
+.resource {
+    fill: #fff;
+}
+
+.resource:hover {
+    cursor: pointer;
+}
+
+.border {
+    fill: #000;
+}
+
+.selected {
+    fill: cornflowerblue;
+}
+
+.resourcetext {
+    font-size: 12px;
+    font-weight: 600;
+}
