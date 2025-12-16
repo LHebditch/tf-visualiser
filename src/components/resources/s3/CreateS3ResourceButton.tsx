@@ -20,7 +20,7 @@ const CreateS3ResourceButton: FC = () => {
                 friendlyName: `bucket_${s3Resources.length}`,
 
                 exportsPermissions: true,
-                permissions: {
+                exportedPermissions: {
                     create_policy: true,
                     read_policy: true,
                     delete_policy: true

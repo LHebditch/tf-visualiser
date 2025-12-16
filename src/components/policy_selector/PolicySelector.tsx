@@ -20,26 +20,27 @@ const PolicySelector: FC<Props> = ({ resources, selectedPolicy, onChange }) => {
 
     const linkInfo = (id: string, name: string, type: PolicyType, suffix: string): AvailablePermission => {
         return {
-            id: `${id}, ${type}`,
+            id: `${id},${type}`,
             name: `${name}.${suffix}`
         }
     }
+
     const permissions: AvailablePermission[] = []
     for (const r of resources) {
         const name = createResourceName(r)
-        if (r.permissions?.create_policy) {
+        if (r.exportedPermissions?.create_policy) {
             permissions.push(linkInfo(r.id, name, 'create_policy', 'create'))
         }
-        if (r.permissions?.read_policy) {
+        if (r.exportedPermissions?.read_policy) {
             permissions.push(linkInfo(r.id, name, 'read_policy', 'read'))
         }
-        if (r.permissions?.update_policy) {
+        if (r.exportedPermissions?.update_policy) {
             permissions.push(linkInfo(r.id, name, 'update_policy', 'update'))
         }
-        if (r.permissions?.delete_policy) {
+        if (r.exportedPermissions?.delete_policy) {
             permissions.push(linkInfo(r.id, name, 'delete_policy', 'delete'))
         }
-        if (r.permissions?.invoke_policy) {
+        if (r.exportedPermissions?.invoke_policy) {
             permissions.push(linkInfo(r.id, name, 'invoke_policy', 'invoke'))
         }
     }

@@ -82,7 +82,7 @@ const renderDependsOn = (permissions: Permission[]): string => {
 
 const renderEnv = (env: { [key: string]: string }): string => {
     if (Object.keys(env).length === 0) {
-        return ''
+        return 'env = {}'
     }
 
     return `env = {

@@ -17,7 +17,7 @@ export type Resource = {
     resourceType: ResourceType
     friendlyName: string
     exportsPermissions: boolean
-    permissions: ResourceExports
+    exportedPermissions: ResourceExports
 }
 
 type SelectedResource = {

@@ -21,10 +21,8 @@ const CreateLambdaResourceButton: FC = () => {
                 image: '',
 
                 exportsPermissions: true,
-                permissions: {
-                    create_policy: true,
-                    read_policy: true,
-                    delete_policy: true
+                exportedPermissions: {
+                    invoke_policy: true,
                 }
             },
             pos: { x: 50 - currentOffset.x, y: 50 - currentOffset.y }

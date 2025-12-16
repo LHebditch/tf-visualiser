@@ -10,6 +10,7 @@ import CreateLambdaResourceButton from './components/resources/lambda/CreateLamb
 import CreateS3ResourceButton from './components/resources/s3/CreateS3ResourceButton'
 import Canvas from './components/canvas/Canvas'
 import ResourceLink from './components/resource_link/ResourceLink'
+import ResourceStateEditor from './editor/ResourceStateEditor'
 
 const DEBUG = false
 
@@ -73,7 +74,7 @@ const Builder: FC = () => {
 
         const allResourcesTF = [
             ...s3ResourcesTF,
-            lambdaResourcesTF
+            ...lambdaResourcesTF
         ]
 
         const provider = dedent(`
@@ -137,7 +138,7 @@ const Builder: FC = () => {
                 </Canvas>
             </div>
             <div className={styles.editor}>
-                <p>TODO</p>
+                <ResourceStateEditor />
             </div>
         </section>
 
