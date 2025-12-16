@@ -8,7 +8,7 @@ export type ResourceComponent = {
 
 export const generateResourceId = (prefix: string) => {
     shortid.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-")
-    const id = shortid.generate().replace('/g/', 'a').replace(/_/g, 'A')
+    const id = shortid.generate().replace(/-/g, 'a').replace(/_/g, 'A')
 
     return `${prefix}_${id}`
 }

@@ -1,10 +1,10 @@
 import { FC, FormEventHandler, useState } from "react";
-import { LambdaResource } from "../../components/resources/lambda/LambdaResource";
+import { LambdaResource } from "../../resources/lambda/LambdaResource";
 import { useAtom } from "jotai";
-import { IACResource, iacState, Permission } from "../../state/IAC";
-import { PolicyType, Resource, ResourceType } from "../../state/Resource";
+import { IACResource, iacState, Permission } from "../../../state/IAC";
+import { PolicyType, Resource, ResourceType } from "../../../state/Resource";
 import styles from '../Editor.module.css'
-import PolicySelector from "../../components/policy_selector/PolicySelector";
+import PolicySelector from "../../policy_selector/PolicySelector";
 
 const getResourcesWithPermissions = (iac: IACResource[]): Resource[] => {
     return iac.filter(r => r.state.exportsPermissions).map(i => i.state)

@@ -10,7 +10,7 @@ import CreateLambdaResourceButton from './components/resources/lambda/CreateLamb
 import CreateS3ResourceButton from './components/resources/s3/CreateS3ResourceButton'
 import Canvas from './components/canvas/Canvas'
 import ResourceLink from './components/resource_link/ResourceLink'
-import ResourceStateEditor from './editor/ResourceStateEditor'
+import ResourceStateEditor from './components/editor/ResourceStateEditor'
 
 const DEBUG = false
 

@@ -1,12 +1,12 @@
 import { FC, FormEventHandler, useState } from "react";
-import { S3Resource } from "../../components/resources/s3/S3Resource";
+import { S3Resource } from "../../../components/resources/s3/S3Resource";
 import { useAtom } from "jotai";
-import { iacState } from "../../state/IAC";
+import { iacState } from "../../../state/IAC";
 import styles from '../Editor.module.css'
 
 const S3StateEditor: FC<S3Resource> = ({ state }) => {
     const [iac, setIAC] = useAtom(iacState)
-    const [bucketName, setBucketName] = useState('')
+    const [bucketName, setBucketName] = useState(state.bucketName)
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = e => {
         e.preventDefault()
